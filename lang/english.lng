@@ -1,0 +1,62 @@
+##grflangid 0x01
+
+# General GRF strings
+STR_GRF_NAME:Deserts as Objects
+STR_GRF_DESCRIPTION:{}{ORANGE}Adds desert tiles from OpenGFX and OpenGFX2 as objects.{}Also includes an option to replace the current baseset's desert terrain tiles and to generate random objects.{}See {LTBROWN}Set parameters {ORANGE}to choose from four available variants.{}{}{}{SILVER}Graphics: {YELLOW}OpenGFX, OpenGFX2, OpenGFX+ Landscape, OpenGFX2 Objects (all licensed under GPLv2){}{SILVER}Minor additions and coding: {YELLOW}chujo{}{}{}{LTBLUE}April 01, 2025
+STR_GRF_URL:https://github.com/chujo-chujo/Deserts-as-Objects
+
+#####################################################
+
+# Parameters
+STR_PAR_replace_NAME:Desert graphics replacement
+STR_PAR_replace_DESC:{GOLD}Select the desert graphics style to replace your current baseset's deserts.
+STR_PAR_replace_NONE:None
+STR_PAR_replace_OGFX2_grid:OpenGFX2 ({PUSH_COLOUR}{SILVER}gridlines{POP_COLOUR})
+STR_PAR_replace_OGFX2_nogrid:OpenGFX2 ({PUSH_COLOUR}{SILVER}no gridlines{POP_COLOUR})
+STR_PAR_replace_OGFX_grid:OpenGFX ({PUSH_COLOUR}{SILVER}gridlines{POP_COLOUR})
+STR_PAR_replace_OGFX_nogrid:OpenGFX ({PUSH_COLOUR}{SILVER}no gridlines{POP_COLOUR})
+
+STR_OGFX2_objects_grid_NAME:Add OpenGFX2 desert tiles as objects ({PUSH_COLOUR}{SILVER}gridlines{POP_COLOUR})
+STR_OGFX2_objects_grid_DESC:{GOLD}
+STR_OGFX2_objects_nogrid_NAME:Add OpenGFX2 desert tiles as objects ({PUSH_COLOUR}{SILVER}no gridlines{POP_COLOUR})
+STR_OGFX2_objects_nogrid_DESC:{GOLD}
+
+STR_OGFX_objects_grid_NAME:Add OpenGFX desert tiles as objects ({PUSH_COLOUR}{SILVER}gridlines{POP_COLOUR})
+STR_OGFX_objects_grid_DESC:{GOLD}
+STR_OGFX_objects_nogrid_NAME:Add OpenGFX desert tiles as objects ({PUSH_COLOUR}{SILVER}no gridlines{POP_COLOUR})
+STR_OGFX_objects_nogrid_DESC:{GOLD}
+
+STR_random_oases_NAME:Spawn {PUSH_COLOUR}{DKGREEN}oases {POP_COLOUR}in deserts
+STR_random_oases_DESC:{GOLD}Randomly places oases on desert tiles during map generation. The number represents the amount of objects placed on a {WHITE}256×256 {GOLD}tile map (for comparison, there are {WHITE}15 {GOLD}transmitters).{}{}{WHITE}[Range: 0–255, 0=Off]
+STR_yellow_rocks_NAME:Spawn {PUSH_COLOUR}{GOLD}yellow rocks {POP_COLOUR}in deserts
+STR_gray_rocks_NAME:Spawn {PUSH_COLOUR}{SILVER}gray rocks {POP_COLOUR}in deserts
+STR_brown_rocks_NAME:Spawn {PUSH_COLOUR}{CREAM}brown rocks {POP_COLOUR}in deserts
+STR_random_rocks_DESC:{GOLD}Randomly places rock patches on desert tiles during map generation. The number represents the amount of objects placed on a {WHITE}256×256 {GOLD}tile map (for comparison, there are {WHITE}15 {GOLD}transmitters).{}{}{WHITE}[Range: 0–255, 0=Off]
+
+# Class names
+STR_CLASSNAME:Deserts as Objects
+
+# Names of objects
+STR_sand:Sand
+STR_grass_sand:Grass/sand
+STR_rocks:Rocks
+STR_smallrocks:Small rocks
+STR_autosnow:Snow (snowline-responsive)
+STR_snow:Snow
+STR_cacti:Cacti
+STR_palms:Palm trees
+STR_plants:Plants
+STR_people:People, cars
+STR_oasis:Oasis
+
+# Descriptions of objects
+STR_autoslope:{GREEN}Autoslope
+STR_autocoast:{GREEN}Autocoast + on water
+STR_autoslope_coast:{GREEN}Autoslope, autocoast
+STR_autolay:{GREEN}Autolay
+STR_rock_autosnow:{GREEN}Snowline-responsive, autoslope
+STR_no_autosnow:{GREEN}Permanent snow, autoslope
+
+# Error string
+STR_error_plants:Incorrect terrain type.
+STR_error_oasis:Oasis can be placed only on flat terrain.
