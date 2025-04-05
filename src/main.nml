@@ -28,7 +28,7 @@ grf {
             name:      string(STR_OGFX_objects_grid_NAME);
             desc:      string(STR_OGFX_objects_grid_DESC);
             type:      bool;
-            def_value: 1;
+            def_value: 0;
         }
     }
     param 2 {
@@ -960,6 +960,6 @@ spriteset (spriteset_oasis_T3,"gfx/oasis.png")   { template_oasis_T3_32() }
 
 spriteset (spriteset_ogfx2_oasis_ground_menu, "gfx/oasis_ground_menu.png") { [ 0,   0, 128, 150, -63, -103 ] }
 spriteset (spriteset_ogfx_oasis_ground_menu,  "gfx/oasis_ground_menu.png") { [ 150, 0, 128, 150, -63, -103 ] }
-spriteset (spriteset_oasis_menu,        "gfx/oasis.png") { [ 0, 0, 128, 150, -63, -103, ANIM ] }
+spriteset (spriteset_oasis_menu,              "gfx/oasis.png")             { [ 0, 0, 128, 150, -63, -103, ANIM ] }
 
 spritelayout layout_ground_coast { ground { sprite: LOAD_TEMP(2); } }
