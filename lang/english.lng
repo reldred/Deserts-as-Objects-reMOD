@@ -2,7 +2,7 @@
 
 # General GRF strings
 STR_GRF_NAME:Deserts as Objects
-STR_GRF_DESCRIPTION:{}{ORANGE}Adds desert tiles from OpenGFX and OpenGFX2 as objects.{}Also includes an option to replace the current baseset's desert terrain tiles and to generate random objects.{}See {LTBROWN}Set parameters {ORANGE}to choose from four available variants.{}{}{}{SILVER}Graphics: {YELLOW}OpenGFX, OpenGFX2, OpenGFX+ Landscape, OpenGFX2 Objects (all licensed under GPLv2){}{SILVER}Minor additions and coding: {YELLOW}chujo{}{}{}{LTBLUE}April 01, 2025
+STR_GRF_DESCRIPTION:{}{ORANGE}Adds desert tiles from OpenGFX and OpenGFX2 as objects.{}Also includes an option to replace the current baseset's desert terrain tiles and to generate random objects.{}See {LTBROWN}Set parameters {ORANGE}to choose from four available variants.{}{}{}{SILVER}Graphics: {YELLOW}OpenGFX, OpenGFX2, OpenGFX+ Landscape, OpenGFX2 Objects (all licensed under GPLv2){}{SILVER}Minor additions and coding: {YELLOW}chujo{}{}{}{LTBLUE}April 4, 2025
 STR_GRF_URL:https://github.com/chujo-chujo/Deserts-as-Objects
 
 #####################################################
@@ -40,7 +40,6 @@ STR_CLASSNAME:Deserts as Objects
 STR_sand:Sand
 STR_grass_sand:Grass/sand
 STR_rocks:Rocks
-STR_smallrocks:Small rocks
 STR_autosnow:Snow (snowline-responsive)
 STR_snow:Snow
 STR_cacti:Cacti
@@ -53,7 +52,6 @@ STR_oasis:Oasis
 STR_autoslope:{GREEN}Autoslope
 STR_autocoast:{GREEN}Autocoast + on water
 STR_autoslope_coast:{GREEN}Autoslope, autocoast
-STR_autolay:{GREEN}Autolay
 STR_rock_autosnow:{GREEN}Snowline-responsive, autoslope
 STR_no_autosnow:{GREEN}Permanent snow, autoslope
 
