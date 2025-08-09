@@ -97,7 +97,7 @@ def update_lang_file():
 		file.write("".join(english_lng_with_date))
 
 
-output_file = "desert_objects.nml"
+output_file = "desert_objects_remod.nml"
 
 list_of_variants = create_variants("objects.nml")
 insert_data(main_file="main.nml", data=list_of_variants, rand_file="random_objects.nml", output_file=output_file)

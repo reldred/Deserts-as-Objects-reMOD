@@ -1,9 +1,9 @@
 ##grflangid 0x01
 
 # General GRF strings
-STR_GRF_NAME:Deserts as Objects
-STR_GRF_DESCRIPTION:{}{ORANGE}Adds desert tiles from OpenGFX and OpenGFX2 as objects.{}Also includes an option to replace the current baseset's desert terrain tiles and to generate random objects.{}See {LTBROWN}Set parameters {ORANGE}to choose from four available variants.{}{}{}{SILVER}Graphics: {YELLOW}OpenGFX, OpenGFX2, OpenGFX+ Landscape, OpenGFX2 Objects (all licensed under GPLv2){}{SILVER}Minor additions and coding: {YELLOW}chujo{}{}{}{LTBLUE}April 4, 2025
-STR_GRF_URL:https://github.com/chujo-chujo/Deserts-as-Objects
+STR_GRF_NAME:Deserts as Objects reMOD
+STR_GRF_DESCRIPTION:{}{ORANGE}Adds desert/arctic tiles from OpenGFX and OpenGFX2 as objects.{}Also includes an option to replace the current baseset's desert terrain tiles and to generate random objects.{}See {LTBROWN}Set parameters {ORANGE}to choose from four available variants.{}{}{}{SILVER}Graphics: {YELLOW}OpenGFX, OpenGFX2, OpenGFX+ Landscape, OpenGFX2 Objects (all licensed under GPLv2){}{SILVER}Minor additions and coding: {YELLOW}chujo{}{}{}{LTBLUE}August 09, 2025
+STR_GRF_URL:https://github.com/reldred/Deserts-as-Objects-reMOD
 
 #####################################################
 
@@ -15,11 +15,18 @@ STR_PAR_replace_OGFX2_grid:OpenGFX2 ({PUSH_COLOUR}{SILVER}gridlines{POP_COLOUR})
 STR_PAR_replace_OGFX2_nogrid:OpenGFX2 ({PUSH_COLOUR}{SILVER}no gridlines{POP_COLOUR})
 STR_PAR_replace_OGFX_grid:OpenGFX ({PUSH_COLOUR}{SILVER}gridlines{POP_COLOUR})
 STR_PAR_replace_OGFX_nogrid:OpenGFX ({PUSH_COLOUR}{SILVER}no gridlines{POP_COLOUR})
+STR_PAR_replace_OGFX2ARCTIC_grid:OpenGFX2 Arctic ({PUSH_COLOUR}{SILVER}gridlines{POP_COLOUR})
+STR_PAR_replace_OGFX2ARCTIC_nogrid:OpenGFX2 Arctic ({PUSH_COLOUR}{SILVER}no gridlines{POP_COLOUR})
 
 STR_OGFX2_objects_grid_NAME:Add OpenGFX2 desert tiles as objects ({PUSH_COLOUR}{SILVER}gridlines{POP_COLOUR})
 STR_OGFX2_objects_grid_DESC:{GOLD}
 STR_OGFX2_objects_nogrid_NAME:Add OpenGFX2 desert tiles as objects ({PUSH_COLOUR}{SILVER}no gridlines{POP_COLOUR})
 STR_OGFX2_objects_nogrid_DESC:{GOLD}
+
+STR_OGFX2ARCTIC_objects_grid_NAME:Add OpenGFX2 arctic tiles as objects ({PUSH_COLOUR}{SILVER}gridlines{POP_COLOUR})
+STR_OGFX2ARCTIC_objects_grid_DESC:{GOLD}
+STR_OGFX2ARCTIC_objects_nogrid_NAME:Add OpenGFX2 arctic tiles as objects ({PUSH_COLOUR}{SILVER}no gridlines{POP_COLOUR})
+STR_OGFX2ARCTIC_objects_nogrid_DESC:{GOLD}
 
 STR_OGFX_objects_grid_NAME:Add OpenGFX desert tiles as objects ({PUSH_COLOUR}{SILVER}gridlines{POP_COLOUR})
 STR_OGFX_objects_grid_DESC:{GOLD}

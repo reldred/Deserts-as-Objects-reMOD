@@ -12,7 +12,7 @@ grf {
             desc:      string(STR_PAR_replace_DESC);
             type:      int;
             min_value: 0;
-            max_value: 4;
+            max_value: 6;
             def_value: 1;
             names: {
                 0: string(STR_PAR_replace_NONE);
@@ -20,6 +20,8 @@ grf {
                 2: string(STR_PAR_replace_OGFX2_nogrid);
                 3: string(STR_PAR_replace_OGFX_grid);
                 4: string(STR_PAR_replace_OGFX_nogrid);
+                5: string(STR_PAR_replace_OGFX2ARCTIC_grid);
+                6: string(STR_PAR_replace_OGFX2ARCTIC_nogrid);
             };
         }
     }
@@ -594,6 +596,33 @@ template template_text() {
     [1440, 0, 64, 41, -31, -18]
 }
 
+// OGFX2 Templates stolen to expedite things
+// Terrain: Standard groundtiles
+template template_groundtiles_opengfx2(x, y, z) {
+	[   1*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[  81*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 161*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+	[ 241*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+
+	[ 321*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 399*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,   0*z ]
+	[ 479*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+	[ 559*z+x*z, 1*z+y*z, 64*z, 24*z-1, -31*z,   0*z ]
+
+	[ 639*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+	[ 719*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+	[ 799*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -8*z ]
+	[ 879*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -8*z ]
+
+	[ 959*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+	[1039*z+x*z, 1*z+y*z, 64*z, 40*z-1, -31*z,  -8*z ]
+	[1119*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -8*z ]
+	[1197*z+x*z, 1*z+y*z, 64*z, 48*z-1, -31*z, -16*z ]
+
+	[1277*z+x*z, 1*z+y*z, 64*z, 16*z-1, -31*z,   0*z ]
+	[1357*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -8*z ]
+	[1437*z+x*z, 1*z+y*z, 64*z, 32*z-1, -31*z,  -8*z ]
+}
 
 /////////////////////////////////////////////////////////////////////
 //  FUNCTIONS
@@ -879,6 +908,129 @@ if (climate == CLIMATE_TROPICAL && param_replace == 4) {
     replacenew(RAILTYPE_TUNNELS, "gfx/ogfx_nogrid_tunnels.png", 8) { template_ogfx_railtype_tunnels() }
 }
 
+// OGFX 2 ARCTIC
+if (climate == CLIMATE_TROPICAL && param_replace == 5) {
+    replace ogfx2arctic_grid_sand       (4550, "gfx/ogfx2arctic_grid_ground.png")    { template_groundtiles(0) }
+    replace ogfx2arctic_grid_grass_sand (4512, "gfx/ogfx2arctic_grid_ground.png")    { template_groundtiles(2) }
+    replace ogfx2arctic_grid_rail       (1037, "gfx/ogfx2arctic_grid_railroad.png")  { template_rail(0) }
+    replace ogfx2arctic_grid_monorail   (1119, "gfx/ogfx2arctic_grid_railroad.png")  { template_rail(1) }
+    replace ogfx2arctic_grid_maglev     (1201, "gfx/ogfx2arctic_grid_railroad.png")  { template_rail(2) }
+    replace ogfx2arctic_grid_road       (1351, "gfx/ogfx2arctic_grid_road.png")      { template_road() }
+    replace ogfx2arctic_grid_tunnels_0  (2397, "gfx/ogfx2arctic_nogrid_tunnels.png") { template_ogfx2_tunnels() }
+    replace ogfx2arctic_grid_cross_rail (1378, "gfx/ogfx2arctic_grid_cross.png")     { template_cross_rail(0) }
+    replace ogfx2arctic_grid_cross_mono (1390, "gfx/ogfx2arctic_grid_cross.png")     { template_cross_rail(1) }
+    replace ogfx2arctic_grid_cross_magl (1402, "gfx/ogfx2arctic_grid_cross.png")     { template_cross_rail(2) }
+    replacenew(RAILTYPE_TUNNELS, "gfx/ogfx2arctic_nogrid_tunnels.png", 8) { template_ogfx2_railtype_tunnels() }
+}
+
+if (climate == CLIMATE_TROPICAL && param_replace == 6) {
+    replace ogfx2arctic_nogrid_sand       (4550, "gfx/ogfx2arctic_nogrid_ground.png")   { template_groundtiles(0) }
+    replace ogfx2arctic_nogrid_grass_sand (4512, "gfx/ogfx2arctic_nogrid_ground.png")   { template_groundtiles(2) }
+    replace ogfx2arctic_nogrid_rail       (1037, "gfx/ogfx2arctic_nogrid_railroad.png") { template_rail(0) }
+    replace ogfx2arctic_nogrid_monorail   (1119, "gfx/ogfx2arctic_nogrid_railroad.png") { template_rail(1) }
+    replace ogfx2arctic_nogrid_maglev     (1201, "gfx/ogfx2arctic_nogrid_railroad.png") { template_rail(2) }
+    replace ogfx2arctic_nogrid_road       (1351, "gfx/ogfx2arctic_nogrid_road.png")     { template_road() }
+    replace ogfx2arctic_nogrid_tunnels_0  (2397, "gfx/ogfx2arctic_nogrid_tunnels.png")  { template_ogfx2_tunnels() }
+    replace ogfx2arctic_nogrid_cross_rail (1378, "gfx/ogfx2arctic_nogrid_cross.png")    { template_cross_rail(0) }
+    replace ogfx2arctic_nogrid_cross_mono (1390, "gfx/ogfx2arctic_nogrid_cross.png")    { template_cross_rail(1) }
+    replace ogfx2arctic_nogrid_cross_magl (1402, "gfx/ogfx2arctic_nogrid_cross.png")    { template_cross_rail(2) }
+    replacenew(RAILTYPE_TUNNELS, "gfx/ogfx2arctic_nogrid_tunnels.png", 8) { template_ogfx2_railtype_tunnels() }
+}
+
+/////////////////////////////////////////////////////////////////////
+//  JGRPP DESERT ROCKS
+/////////////////////////////////////////////////////////////////////
+
+spriteset (grid_desert_rocks,  "gfx/tropical_groundtiles_desert_rocks_gridline_8bpp.png")  { template_groundtiles_opengfx2(0, 0, 1) }
+spriteset (gridless_desert_rocks,  "gfx/tropical_groundtiles_desert_rocks_nogridline_8bpp.png")  { template_groundtiles_opengfx2(0, 0, 1) }
+spriteset (grid_arctic_rocks,  "gfx/arctic_groundtiles_rocks_alt_gridline_8bpp.png")  { template_groundtiles_opengfx2(0, 0, 1) }
+spriteset (gridless_arctic_rocks,  "gfx/arctic_groundtiles_rocks_alt_nogridline_8bpp.png")  { template_groundtiles_opengfx2(0, 0, 1) }
+
+switch (FEAT_NEWLANDSCAPE, SELF, switch_grid_desert_rocks, terrain_type) {
+	TILETYPE_DESERT: grid_desert_rocks;
+}
+
+switch (FEAT_NEWLANDSCAPE, SELF, switch_gridless_desert_rocks, terrain_type) {
+	TILETYPE_DESERT: gridless_desert_rocks;
+}
+
+switch (FEAT_NEWLANDSCAPE, SELF, switch_grid_arctic_rocks, terrain_type) {
+	TILETYPE_DESERT: grid_arctic_rocks;
+}
+
+switch (FEAT_NEWLANDSCAPE, SELF, switch_gridless_arctic_rocks, terrain_type) {
+	TILETYPE_DESERT: gridless_arctic_rocks;
+}
+
+// OGFX 2
+if (climate == CLIMATE_TROPICAL && param_replace == 1) {
+    item (FEAT_NEWLANDSCAPE, item_rocks, NEW_LANDSCAPE_ID_ROCKS)  {
+	    property {
+		    enable_recolour: 0;
+	    }
+	    graphics {
+		    default: switch_grid_desert_rocks;
+	    }
+    }
+
+    item (FEAT_GLOBALVARS) {
+	property {
+		allow_rocks_in_desert: 1;
+	}
+}
+}
+
+if (climate == CLIMATE_TROPICAL && param_replace == 2) {
+    item (FEAT_NEWLANDSCAPE, item_rocks, NEW_LANDSCAPE_ID_ROCKS)  {
+	    property {
+		    enable_recolour: 0;
+	    }
+	    graphics {
+		    default: switch_gridless_desert_rocks;
+	    }
+    }
+
+    item (FEAT_GLOBALVARS) {
+	property {
+		allow_rocks_in_desert: 1;
+	}
+}
+}
+
+// OGFX 2 ARCTIC
+if (climate == CLIMATE_TROPICAL && param_replace == 5) {
+    item (FEAT_NEWLANDSCAPE, item_rocks, NEW_LANDSCAPE_ID_ROCKS)  {
+	    property {
+		    enable_recolour: 0;
+	    }
+	    graphics {
+		    default: switch_grid_arctic_rocks;
+	    }
+    }
+
+    item (FEAT_GLOBALVARS) {
+	property {
+		allow_rocks_in_desert: 1;
+	}
+}
+}
+
+if (climate == CLIMATE_TROPICAL && param_replace == 6) {
+    item (FEAT_NEWLANDSCAPE, item_rocks, NEW_LANDSCAPE_ID_ROCKS)  {
+	    property {
+		    enable_recolour: 0;
+	    }
+	    graphics {
+		    default: switch_gridless_arctic_rocks;
+	    }
+    }
+
+    item (FEAT_GLOBALVARS) {
+	property {
+		allow_rocks_in_desert: 1;
+	}
+}
+}
 
 /////////////////////////////////////////////////////////////////////
 //  OBJECTS
