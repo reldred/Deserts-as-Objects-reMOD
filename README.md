@@ -2,6 +2,10 @@
 
 ![Preview.](_readme/preview.png)
 
+## reMOD?
+
+Hahahahahah i'm back again to ruin another grf. This fork adds the ability to replace the desert baseset tiles with OpenGFX2 arctic tiles, and also adds support for JGRPP desert rocks. Needs JGR's NMLC to compile. I didn't touch objects, they looked scary, and I don't use them.
+
 ## About
 
 The main goal of this NewGRF is to provide a **desert landscape**, regardless of your map's climate.<br>
